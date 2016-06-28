@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Flick album</title>
+  <script src="/src/lib/react.js"></script>
+  <script src="/src/lib/react-dom.js"></script>
+  <link rel="stylesheet" type="text/css" href="/src/css/album.css">
+  <script type="text/javascript">
+    (function(){
+      var tags = 'london';
+      var script = document.createElement('script');
+      script.src = 'http://api.flickr.com/services/feeds/photos_public.gne?format=json&jsoncallback=__flickrALbumCb&tags=' + tags;
+      document.head.appendChild(script);
+    })();
+  </script>
+</head>
+<body>
+	<div id="container"></div>
+	<script type="text/javascript" src="/src/js/util.js"></script>
+  <script type="text/javascript" src="/target/js/album.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+ul.album-container {
+    list-style: none;
+}
+
+ul.album-container li {
+    display: inline-block;
+    width: 33%;
+}
+
+ul.album-container li.selected img {
+    outline: red dashed 3px;
+    opacity: 0.5;
+}
+

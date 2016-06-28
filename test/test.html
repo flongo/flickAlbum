@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../node_modules/mocha/mocha.css" />
+  </head>
+  <body>
+    <div id="container"></div>
+    <div id="mocha"></div>
+    <script src="../node_modules/mocha/mocha.js"></script> 
+    <script src="../node_modules/chai/chai.js"></script> 
+    <script>
+      mocha.ui('bdd');
+      assert = chai.assert;
+    </script> 
+    <script src="../src/lib/react.js"></script>
+    <script src="../src/lib/react-dom.js"></script>
+    <script src="../src/lib/jQuery.js"></script>
+    <script type="text/javascript" src="./storageInitializer.js"></script>
+    <script type="text/javascript" src="../src/js/util.js"></script>
+    <script type="text/javascript" src="../target/js/album.js"></script>
+    <script type="text/javascript" src="./mock/flickrMock.js"></script>
+    <script src="flickrAlbumTest.js"></script> 
+    <script>
+      if (window.mochaPhantomJS) {
+        mochaPhantomJS.run();
+      } else {
+        mocha.run();
+      }
+    </script>
+  </body>
+</html>

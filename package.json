@@ -1,0 +1,34 @@
+{
+    "name" : "flickrAlbum",
+    "version" : "1.0.0",
+    "description" : "Simple application to select photos from a flickr album",
+    "main" : "src/app.js",
+    "scripts" : {
+        "test" : "mocha-phantomjs -p ./node_modules/phantomjs/lib/phantom/bin/phantomjs.exe  test/test.html",
+        "start" : "node src/app.js",
+        "prestart" : "babel src/js -d target/js",
+        "pretest" : "babel src/js -d target/js"
+    },
+    "author" : "Francesco Longo",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/flongo/flickrAlbum.git"
+    },
+    "license" : "ISC",
+    "dependencies" : {
+        "express" : "~4.13.4"
+    },
+    "devDependencies" : {
+        "mocha-phantomjs" : "~4.1.0",
+        "phantomjs" : "~2.1.7",
+        "chai" : "~3.5.0",
+        "mocha" : "~2.5.3",
+        "babel-cli": "^6.0.0",
+        "babel-preset-es2015": "^6.3.13",
+        "babel-core": "^6.3.26",
+        "babel-loader": "^6.2.0",
+        "babel-preset-es2015": "^6.3.13",
+        "babel-preset-react": "^6.3.13",
+        "babel-preset-stage-0": "^6.3.13"
+    }
+}

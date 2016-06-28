@@ -1,0 +1,1 @@
+window.localStorage.setItem("flickAlbumApp", JSON.stringify(["http://farm8.staticflickr.com/7443/27916675095_f95c2c1495_m.jpg", "doesNotExist.jpg"]));
