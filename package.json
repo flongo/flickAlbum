@@ -4,7 +4,7 @@
     "description" : "Simple application to select photos from a flickr album",
     "main" : "src/app.js",
     "scripts" : {
-        "test" : "mocha-phantomjs -p ./node_modules/phantomjs/lib/phantom/bin/phantomjs.exe  test/test.html",
+        "test" : "node test/testLauncher.js",
         "start" : "node src/app.js",
         "pretest" : "babel src/js -d target/js"
     },
