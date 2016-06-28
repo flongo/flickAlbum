@@ -6,7 +6,6 @@
     "scripts" : {
         "test" : "mocha-phantomjs -p ./node_modules/phantomjs/lib/phantom/bin/phantomjs.exe  test/test.html",
         "start" : "node src/app.js",
-        "prestart" : "babel src/js -d target/js",
         "pretest" : "babel src/js -d target/js"
     },
     "author" : "Francesco Longo",
