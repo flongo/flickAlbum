@@ -26,10 +26,12 @@ var Album = React.createClass({
     getInitialState: function() {     
         var self = this;
         Util.addFlickrCallback(function (photos) {
+            // Update the state after flicker returns the list of photos
             self.setState({
                 photos: photos
             });
         });
+        // return an empty array at the beginning
         return {
             photos : []
         };

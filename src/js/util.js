@@ -4,6 +4,10 @@
     var selectedPhotos = [];
     var LOCAL_STORAGE_KEY = "flickAlbumApp";
 
+    /**
+     * Create Flickr jsonp global method
+     * @param {Function} cb - called wehn the data is returned
+     */
     var addFlickrCallback = function (cb) {
         window.__flickrALbumCb = function (data) {
             cb(processFlickResponse(data));
@@ -11,7 +15,11 @@
         }
     };
 
-
+    /**
+     * Process flickr response to output a more concise structure
+     * @param {Object} res - called when the data is returned
+     * @return {Object}
+     */
     var processFlickResponse = function (res) {
 
         var photos = res.items;
@@ -35,6 +43,11 @@
         return output;
     };
 
+    /**
+     * Retrieve the array stored in localStorage containing the list
+     * of images sources selected in a rpevious session
+     * @return {Array}
+     */
     var retrievePreviouslySelected = function () {
 
         if (window.localStorage) {
@@ -47,12 +60,19 @@
         }
     };
 
+    /**
+     * Save selected images sources into local storage
+     */
     var saveSelected = function () {
         if (window.localStorage) {
             window.localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(selectedPhotos));
         }
     };
 
+    /**
+     * Update the saved list of selected images
+     * @param {Object} photo - photo that is selected or unselected
+     */
     var updateSelection = function (photo) {
         if (photo.selected) {
             selectedPhotos.push(photo.src);
